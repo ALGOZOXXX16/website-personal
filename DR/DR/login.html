@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Dapur Rasa</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: floralwhite;
+      color: #333;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    header {
+      background-color: #ff7043;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo {
+      width: 55px;
+      height: 55px;
+    }
+
+    header h1 {
+      color: white;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .login-page {
+      max-width: 400px;
+      margin: 60px auto;
+      padding: 30px;
+      background-color: #fffefc;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .login-page h2 {
+      margin-bottom: 25px;
+      color: #ff7043;
+      font-size: 1.6rem;
+    }
+
+    .login-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      text-align: left;
+    }
+
+    .login-form label {
+      font-weight: bold;
+    }
+
+    .login-form input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .login-form button {
+      padding: 10px;
+      background-color: #ff7043;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .login-form button:hover {
+      background-color: #ff5722;
+    }
+
+    .register-link {
+      margin-top: 15px;
+      font-size: 0.95rem;
+    }
+
+    .register-link a {
+      color: #ff7043;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .register-link a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <img src="image/logo.png" alt="Logo Dapur Rasa" class="logo">
+      <h1>Dapur Rasa</h1>
+    </div>
+    <nav>
+      <a href="semua.html">Semua</a>
+      <a href="kategori.html">Kategori</a>
+      <a href="about.html">Tentang Kami</a>
+      <a href="login.html">Login/Register</a>
+    </nav>
+  </header>
+
+  <main class="login-page">
+    <h2>Login Akun</h2>
+    <form action="login.php" method="POST" class="login-form">
+      <label for="username">Username</label>
+      <input type="text" name="username" id="username" required />
+
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" required />
+
+      <button type="submit">Masuk</button>
+    </form>
+    <p class="register-link">
+      Belum punya akun? <a href="register.html">Daftar di sini</a>
+    </p>
+  </main>
+
+  <footer>
+    <b>Kelompok 5 - Dapur Rasa -</b>
+  </footer>
+
+</body>
+</html>

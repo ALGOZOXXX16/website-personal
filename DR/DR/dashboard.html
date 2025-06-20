@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Admin - DAPUR RASA</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: 
+        linear-gradient(rgba(54, 42, 42, 0.452), rgba(26, 19, 19, 0.452)),
+        url('image/banner.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #ff7043;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .admin-nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    .admin-nav a:hover {
+      text-decoration: underline;
+    }
+
+    main.dashboard-content {
+      flex: 1;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .stat-box {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      width: 150px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .stat-box h3 {
+      font-size: 32px;
+      color: #ff7043;
+    }
+
+    .stat-box p {
+      margin-top: 5px;
+      font-size: 16px;
+      color: #444;
+    }
+
+    footer {
+      background-color: #ff7043;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <img src="image/logo.png" alt="Logo Dapur Rasa" class="logo" />
+      <h1>DAPUR RASA - Admin</h1>
+    </div>
+    <nav class="admin-nav">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="data_resep.html">Data Resep</a>
+      <a href="data_kategori.html">Data Kategori</a>
+      <a href="logout.html">Logout</a>
+    </nav>
+  </header>
+
+  <main class="dashboard-content">
+    <h2>Selamat Datang, Admin!</h2>
+    <div class="stats">
+      <div class="stat-box">
+        <h3>0</h3>
+        <p>Total Resep</p>
+      </div>
+      <div class="stat-box">
+        <h3>0</h3>
+        <p>Total Kategori</p>
+      </div>
+      <div class="stat-box">
+        <h3>0</h3>
+        <p>Pengguna Terdaftar</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <b>Panel Admin - Dapur Rasa</b>
+  </footer>
+
+</body>
+</html>

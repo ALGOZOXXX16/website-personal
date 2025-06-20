@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Logout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .box {
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background-color: #dc3545;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #c82333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h2>Keluar dari Sistem</h2>
+    <p>Anda akan dialihkan ke halaman login.</p>
+    <a href="login.html" class="btn" onclick="logout()">Logout Sekarang</a>
+  </div>
+
+  <script>
+    function logout() {
+      // Jika menyimpan token/login di localStorage atau sessionStorage
+      localStorage.removeItem('loginUser');
+      sessionStorage.clear();
+
+      // Bisa juga kirim request ke backend jika ada
+
+      // Redirect bisa juga dilakukan otomatis
+      setTimeout(() => {
+        window.location.href = 'login.html';
+      }, 200);
+    }
+  </script>
+
+</body>
+</html>

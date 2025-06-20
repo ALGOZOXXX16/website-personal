@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pendaftaran Berhasil - DAPUR RASA</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: floralwhite;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #ff7043;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo {
+      width: 55px;
+      height: 55px;
+    }
+
+    header h1 {
+      color: white;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .success-page {
+      max-width: 500px;
+      margin: 80px auto;
+      padding: 30px;
+      background-color: #fffefc;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .success-page h2 {
+      color: green;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+
+    .success-page p {
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    .success-page a {
+      color: #0077cc;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <img src="image/logo.png" alt="Logo Dapur Rasa" class="logo">
+      <h1>Dapur Rasa</h1>
+    </div>
+    <nav>
+      <a href="semua.php">Semua</a>
+      <a href="kategori.html">Kategori</a>
+      <a href="about.html">Tentang Kami</a>
+      <a href="login.html">Login/Register</a>
+    </nav>
+  </header>
+
+  <div class="success-page">
+    <h2>✅ Pendaftaran Berhasil</h2>
+    <p>Akun kamu sudah dibuat. Yuk langsung <a href="login_view.php">login sekarang</a>!</p>
+  </div>
+
+  <footer>
+    <b>Kelompok 5 - Dapur Rasa -</b>
+  </footer>
+
+</body>
+</html>

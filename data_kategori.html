@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Data Kategori - DAPUR RASA</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      font-family: Arial, sans-serif;
+      background-color: #fff8dc; /* sama seperti halaman lain */
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 220px;
+      background-color: #ff7043;
+      color: #fff;
+      padding: 20px 10px;
+      flex-shrink: 0;
+    }
+
+    .sidebar .logo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .sidebar .logo img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .sidebar h2 {
+      font-size: 18px;
+    }
+
+    .sidebar a {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+      padding: 10px;
+      margin-bottom: 5px;
+      border-radius: 6px;
+    }
+
+    .sidebar a:hover,
+    .sidebar a.active {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .main-content {
+      flex-grow: 1;
+      padding: 40px;
+    }
+
+    .main-content h1 {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .btn-tambah {
+      background-color: #ff7043;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+
+    .btn-tambah:hover {
+      background-color: #e65c2f;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      padding: 14px 16px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+
+    thead {
+      background-color: #ff7043;
+      color: white;
+    }
+
+    .btn-aksi {
+      padding: 6px 12px;
+      font-size: 13px;
+      border-radius: 4px;
+      color: white;
+      text-decoration: none;
+      margin-right: 5px;
+    }
+
+    .btn-edit {
+      background-color: #ffc107;
+    }
+
+    .btn-edit:hover {
+      background-color: #e0a800;
+    }
+
+    .btn-hapus {
+      background-color: #dc3545;
+    }
+
+    .btn-hapus:hover {
+      background-color: #c82333;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 14px;
+      background-color: #f1f1f1;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="logo">
+      <img src="image/logo.png" alt="Logo">
+      <h2>Dapur Rasa</h2>
+    </div>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="data_resep.html">Data Resep</a>
+      <a href="data_kategori.html" class="active">Data Kategori</a>
+      <a href="logout.html">Logout</a>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <h1>Data Kategori</h1>
+    <a href="tambah_kategori.html" class="btn-tambah">+ Tambah Kategori</a>
+
+    <table>
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Nama Kategori</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Makanan Utama</td>
+          <td>
+            <a href="edit_kategori.html?id=1&nama=Makanan%20Utama" class="btn-aksi btn-edit">Edit</a>
+            <a href="hapus_kategori.html?id=1" class="btn-aksi btn-hapus">Hapus</a>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Sup</td>
+          <td>
+            <a href="edit_kategori.html?id=2&nama=Sup" class="btn-aksi btn-edit">Edit</a>
+            <a href="hapus_kategori.html?id=2" class="btn-aksi btn-hapus">Hapus</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <footer>
+      <b>Panel Admin - Dapur Rasa</b>
+    </footer>
+  </main>
+
+</body>
+</html>

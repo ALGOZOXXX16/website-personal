@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin - Data Kategori</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 220px;
+      background-color: #ff7043;
+      color: #fff;
+      padding: 20px 10px;
+    }
+
+    .sidebar h4 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .sidebar a {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+      padding: 10px;
+      margin-bottom: 5px;
+      border-radius: 5px;
+    }
+
+    .sidebar a:hover,
+    .sidebar a.active {
+      background-color: #050505;
+    }
+
+    .content {
+      flex: 1;
+      padding: 30px;
+      background-color: #f8f9fa;
+    }
+
+    .btn-tambah {
+      display: inline-block;
+      background-color: #ff7043;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-bottom: 20px;
+    }
+
+    .btn-tambah:hover {
+      background-color: #e65c2f;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    th, td {
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    thead {
+      background-color: #ff7043;
+      color: white;
+    }
+
+    .btn-aksi {
+      display: inline-block;
+      padding: 5px 10px;
+      font-size: 13px;
+      border-radius: 4px;
+      color: white;
+      text-decoration: none;
+      margin-right: 5px;
+    }
+
+    .btn-edit {
+      background-color: #ffc107;
+    }
+
+    .btn-hapus {
+      background-color: #dc3545;
+    }
+
+    .btn-edit:hover {
+      background-color: #e0a800;
+    }
+
+    .btn-hapus:hover {
+      background-color: #c82333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <h4>DAPUR RASA</h4>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="data_resep.html">Data Resep</a>
+    <a href="data_kategori.html" class="active">Data Kategori</a>
+    <a href="logout.html">Keluar</a>
+  </div>
+
+  <div class="content">
+    <h2>Data Kategori</h2>
+    <a href="tambah_kategori.html" class="btn-tambah">+ Tambah Kategori</a>
+
+    <table>
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Nama Kategori</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody>
+  <tr>
+    <td>1</td>
+    <td>Makanan Utama</td>
+    <td>
+      <a href="edit_kategori.html?id=1&nama=Makanan%20Utama" class="btn-aksi btn-edit">Edit</a>
+      <a href="hapus_kategori.html?id=1&nama=Makanan%20Utama" class="btn-aksi btn-hapus">Hapus</a>
+    </td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Sup</td>
+    <td>
+      <a href="edit_kategori.html?id=2&nama=Sup" class="btn-aksi btn-edit">Edit</a>
+      <a href="hapus_kategori.html?id=2&nama=Sup" class="btn-aksi btn-hapus">Hapus</a>
+    </td>
+  </tr>
+</tbody>
+
+    </table>
+  </div>
+
+</body>
+</html>

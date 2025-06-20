@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Data Resep - Dapur Rasa</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+      body {
+      font-family: Arial, sans-serif;
+      background: 
+        linear-gradient(rgba(54, 42, 42, 0.452), rgba(26, 19, 19, 0.452)),
+        url('image/banner.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background-color: #ff7043;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .admin-nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    .admin-nav a:hover,
+    .admin-nav a.active {
+      text-decoration: underline;
+    }
+
+    main.dashboard-content {
+      flex: 1;
+      padding: 40px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .btn-tambah {
+      display: inline-block;
+    background-color: #ff7043;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-bottom: 30px; 
+    }
+
+    .btn-tambah:hover {
+      background-color: #e65c2f;
+    }
+
+    .table-container {
+      overflow-x: auto;
+    }
+
+    .resep-table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .resep-table th, .resep-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #eee;
+      text-align: left;
+    }
+
+    .resep-table th {
+      background-color: #ff7043;
+      color: white;
+    }
+
+    .resep-table tr:hover {
+      background-color: #f9f9f9;
+    }
+
+    .btn-edit,
+    .btn-hapus {
+      padding: 6px 12px;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-right: 5px;
+    }
+
+    .btn-edit {
+      background-color: #ffc107;
+      color: black;
+    }
+
+    .btn-hapus {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    .btn-edit:hover {
+      background-color: #e0a800;
+    }
+
+    .btn-hapus:hover {
+      background-color: #c82333;
+    }
+
+    footer {
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 15px;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <img src="image/logo.png" alt="Logo Dapur Rasa" class="logo">
+      <h1>Dapur Rasa - Admin</h1>
+    </div>
+    <nav class="admin-nav">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="data_resep.html" class="active">Data Resep</a>
+      <a href="data_kategori.html">Data Kategori</a>
+      <a href="logout.html">Logout</a>
+    </nav>
+  </header>
+
+  <main class="dashboard-content">
+    <h2 style="color: #ccc;">Data Resep</h2>
+    
+
+
+    <div class="table-container">
+      <table class="resep-table">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama Resep</th>
+            <th>Author</th>
+            <th>Kategori</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Nasi Goreng Spesial</td>
+            <td>Dava</td>
+            <td>Makanan Utama</td>
+            <td>
+              <button class="btn-hapus">Hapus</button>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Soto Ayam Lamongan</td>
+            <td>RIAN</td>
+            <td>Makanan Utama</td>
+            <td>
+              <button class="btn-hapus">Hapus</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer>
+    <b>Panel Admin - Dapur Rasa</b>
+  </footer>
+
+</body>
+</html>
